@@ -1,6 +1,6 @@
 require "middleman-core"
 
-Middleman::Extensions.register :middleman-toc do
+::Middleman::Extensions.register :toc do
   require "middleman-toc/extension"
-  TocExtension
+  ::Middleman::TocExtension
 end
