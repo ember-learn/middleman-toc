@@ -2,8 +2,6 @@ require 'middleman-core'
 
 module Middleman
   class TocExtension < Extension
-    option :my_option, 'default', 'An example option'
-
     def initialize(app, options_hash={}, &block)
       # Call super to build options from the options_hash
       super
@@ -11,18 +9,7 @@ module Middleman
       # Require libraries only when activated
       require 'redcarpet'
       require 'pry'
-
-      # set up your extension
-      # puts options.my_option
     end
-
-    def after_configuration
-      # Do something
-    end
-
-    # A Sitemap Manipulator
-    # def manipulate_resource_list(resources)
-    # end
 
     helpers do
       def toc_for(pages, level=0, base_path="", parent_current=true)
