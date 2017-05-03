@@ -29,18 +29,18 @@ label[for="toc-toggle"] {
   position: relative;
 
   &:hover {
-    color: $ember-orange;
+    color: #dd6a58;
     &:after {
-      border-color: $ember-orange rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+      border-color: #dd6a58 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
     }
     .toc-toggle:checked ~ &:after {
-      border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) $ember-orange rgba(0, 0, 0, 0);
+      border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #dd6a58 rgba(0, 0, 0, 0);
     }
   }
 
   &:after {
     content: '';
-    border-color: $light-brown rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+    border-color: #b67d47 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
     border-style: solid;
     border-width: 5px 4px 0 4px;
     height: 0;
@@ -53,24 +53,24 @@ label[for="toc-toggle"] {
   }
 
   .toc-toggle:checked ~ &:after {
-    border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) $light-brown rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #b67d47 rgba(0, 0, 0, 0);
     border-width: 0 4px 5px 4px;
   }
 
-  @include media($large-screen) {
+  @media only screen and (min-width: 860px) {
     display: none;
   }
 }
 
 .toc-container {
-  border-top: $base-border;
+  border-top: 1px solid #f8e7cf;
   overflow: hidden;
   display: none;
 
   .toc-toggle:checked ~ & {
     display: block;
   }
-  @include media($large-screen) {
+  @media only screen and (min-width: 860px) {
     display: block;
 
     // ensure toc-toggle can not cause toc-container to be hidden on large screen
@@ -84,13 +84,13 @@ li.toc-level-0 {
   margin-bottom: 0.5em;
 
   a {
-    color: $brown;
+    color: #865931;
     display: block;
     line-height: 1.25;
     padding: 0.33em 0;
 
     &:hover {
-      color: $ember-orange;
+      color: #dd6a58;
     }
   }
 
@@ -101,8 +101,8 @@ li.toc-level-0 {
 }
 
 ol.toc-level-1 {
-  border-left: $base-border;
-  font-size: $base-font-size * 0.9;
+  border-left: 1px solid #f8e7cf;
+  font-size: 0.9rem;
 
   &:not(.selected) {
     display: none;
@@ -110,11 +110,11 @@ ol.toc-level-1 {
 
   li {
     border-left: 3px solid transparent;
-    transition: border-width $duration, margin-right $duration;
+    transition: border-width 200ms, margin-right 200ms;
 
     &.selected,
     &:hover {
-      border-left-color: $base-border-color;
+      border-left-color: #f8e7cf;
     }
 
     &:hover {
@@ -124,6 +124,6 @@ ol.toc-level-1 {
   }
 
   a {
-    padding-left: $gutter;
+    padding-left: 30px;
   }
 }
