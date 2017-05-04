@@ -1,7 +1,8 @@
 require "spec_helper"
 require "hashie"
+require 'middleman-toc/toc_helpers'
 
-describe TOC::Helpers do
+describe TocHelpers do
   let(:helper)                 { HelperTester.new }
   let(:basic_chapter_title)    { "What even is middleman?" }
   let(:basic_guide_title)      { "Middleman Basics" }
@@ -9,7 +10,7 @@ describe TOC::Helpers do
 
   before(:each) do
     class HelperTester
-      include TOC::Helpers
+      include TocHelpers
     end
 
     data_yml = File.read('spec/fixtures/pages.yml')
